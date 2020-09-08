@@ -75,10 +75,12 @@ if (!class_exists('MSPC_Frontend_Product')) {
 				//before fancy product designer
 				else if ($module_pos == 'before_fancy_product_designer') {
 					// MRR - Add MSPC even with raq
-					if (!class_exists('YITH_YWRAQ_Order_Request')) {
-						add_action('fpd_before_product_designer', array(&$this, 'add_mspc_form'), 20);
-					} else {
+					if (isset($_GET['raq_item_key'])) {
+						//echo "raq<br>";
 						add_action('fpd_before_product_designer_raq', array(&$this, 'add_mspc_form'), 20);
+					} else {
+						//echo "woo<br>";
+						add_action('fpd_before_product_designer', array(&$this, 'add_mspc_form'), 20);
 					}
 					// MRR -END
 				}
