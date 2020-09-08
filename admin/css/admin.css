@@ -1,0 +1,75 @@
+/*
+ * Styling for the admin
+ *
+*/
+
+/**************************
+**** META BOX *******
+**************************/
+
+.mspc-option-headline {
+	padding-left: 12px;
+}
+
+#mspc-fpd-add-module {
+	margin-left: 10px;
+}
+
+#mspc-fpd-modules-list strong {
+	text-transform: capitalize;
+	width: 144px;
+	display: inline-block;
+}
+
+#mspc-fpd-modules-list h3 {
+	cursor: default;
+}
+
+#mspc-fpd-modules-list input {
+	float: none;
+	width: 150px;
+	height: 28px;
+	font-weight: normal;
+}
+
+#mspc-fpd-modules-list input[type="number"] {
+	width: 50px;
+}
+
+#mspc-fpd-modules-list .wc-metabox h3 > * {
+	margin-right: 5px;
+}
+
+/**************************
+**** ATTRIBUTES FORM *******
+**************************/
+
+.mspc-upload-field {
+	display: inline-table;
+	vertical-align: middle;
+	width: 95%;
+}
+
+.mspc-upload-field > * {
+	display: table-cell !important;
+	margin: 0 !important;
+	width: 10%;
+}
+
+.mspc-upload-field > input {
+	width: 100%;
+	line-height: 21px;
+}
+
+
+/* Helper */
+.mspc-clearfix:before, .mspc-clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.mspc-clearfix:after { clear: both; }
+.mspc-clearfix { zoom: 1; }
+.mspc-help {font-size: 11px; cursor: help;}
+.mspc-children-floated > div {float: left;padding-right: 20px;}
+.mspc-children-floated > div:last-child {padding: 0;}
+.mspc-clear {clear: both;}
+.mspc-hidden {display: none !important;}
+.mspc-left {float: left;}
+.mspc-right {float: right;}
