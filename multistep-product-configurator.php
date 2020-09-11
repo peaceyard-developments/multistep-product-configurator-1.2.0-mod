@@ -1,10 +1,11 @@
 <?php
 /*
-Plugin Name: Multistep Product Configurator for WooCommerce
+Plugin Name: Multistep Product Configurator for WooCommerce 1.2.0 - Mod
 Plugin URI: http://codecanyon.net/item/multistep-product-configurator-for-woocommerce-/8749384
 Description: Create a Multistep Product Configurator with the attributes and variations of your products.
 Version: 1.2.0
 Author: radykal.me
+Modified by: Manoj R. Randeni
 Author URI: https://radykal.me
 */
 
@@ -64,5 +65,3 @@ if( !class_exists('Multistep_Product_Configurator') ) {
 }
 
 new Multistep_Product_Configurator();
-
-?>
