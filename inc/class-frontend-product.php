@@ -515,7 +515,7 @@ if (!class_exists('MSPC_Frontend_Product')) {
 			}
 
 			return $attachment[0];
-			//MRR-END
+
 
 			/* // Split the $url into two parts with the wp-content directory as the separator
 			$parsed_url  = explode( parse_url( WP_CONTENT_URL, PHP_URL_PATH ), $url );
@@ -532,6 +532,8 @@ if (!class_exists('MSPC_Frontend_Product')) {
 			$attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM {$wpdb->prefix}posts WHERE guid RLIKE %s;", $parsed_url[1] ) );
 			// Returns null if no attachment is found
 			return $attachment[0]; */
+
+			//MRR-END
 		}
 	}
 }
