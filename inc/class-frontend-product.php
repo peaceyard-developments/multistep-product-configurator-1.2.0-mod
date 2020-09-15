@@ -271,7 +271,32 @@ if (!class_exists('MSPC_Frontend_Product')) {
 						</div><!-- Content -->
 
 					<?php endif; ?>
-					<a href="#" class="mspc-clear-selection"><?php _e('Clear selection', 'radykal'); ?></a>
+					<!-- MRR - Add Peaceyard Note after MSPC -->
+					<div class="py-wrapper">
+						<div class="py-note" style="flex-basis: 68%;">
+							<div class="py-msg">
+								<h3>
+									<?php _e('Design your memorial below or get help from us with your design', 'peaceyard-product'); ?>
+								</h3>
+								<p>
+									<?php _e('Our goal is to provide you everything you need to create the most
+									unique and personalized memorial. You can customize our memorial on
+									your own or get help from one of our professionals.', 'peaceyard-product'); ?>
+								</p>
+							</div>
+							<div class="py-cta">
+								<a href="#" class="mspc-clear-selection"><?php _e('Please help me', 'peaceyard-product'); ?></a>
+							</div>
+						</div>
+						<div class="py-mspc-clear" style="flex-basis: 32%;">
+							<a href="#" class="mspc-clear-selection"><?php _e('Clear selection', 'radykal'); ?></a>
+						</div>
+					</div>
+
+					<!-- <a href="#" class="mspc-clear-selection"><?php _e('Clear selection', 'radykal'); ?></a>
+ -->
+					<!-- MRR-END -->
+
 
 				</div><!-- Wrapper --->
 
