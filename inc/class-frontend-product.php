@@ -263,17 +263,10 @@ if (!class_exists('MSPC_Frontend_Product')) {
 						</div><!-- Content -->
 
 					<?php endif; ?>
-<<<<<<< HEAD
 					<!-- Add Peaceyard Note after MSPC -->
 					<div class="py-wrapper">
 						<div class="py-note" style="flex-basis: 68%;">
 							<div class="py-msg" style="flex-basis: 70%;">
-=======
-					<!-- MRR - Add Peaceyard Note after MSPC -->
-					<div class="py-wrapper">
-						<div class="py-note" style="flex-basis: 68%;">
-							<div class="py-msg">
->>>>>>> ef13218db1ddcc5728ff8ae631b504c0442fafe0
 								<h3>
 									<?php _e('Design your memorial below or get help from us with your design', 'peaceyard-product'); ?>
 								</h3>
@@ -283,7 +276,6 @@ if (!class_exists('MSPC_Frontend_Product')) {
 									your own or get help from one of our professionals.', 'peaceyard-product'); ?>
 								</p>
 							</div>
-<<<<<<< HEAD
 							<div class="py-cta" style="flex-basis: 30%;">
 								<?php
 								$model_slug =  basename(strtok($_SERVER["REQUEST_URI"], '?'));
@@ -295,10 +287,6 @@ if (!class_exists('MSPC_Frontend_Product')) {
 								$model_help = get_site_url() . $quote_string . $link_params;
 								?>
 								<a class=" py-note-btn" href="<?php echo $model_help; ?>" target="_self"><?php _e('Please help me', 'peaceyard-product'); ?></a>
-=======
-							<div class="py-cta">
-								<a href="#" class="mspc-clear-selection"><?php _e('Please help me', 'peaceyard-product'); ?></a>
->>>>>>> ef13218db1ddcc5728ff8ae631b504c0442fafe0
 							</div>
 						</div>
 						<div class="py-mspc-clear" style="flex-basis: 32%;">
@@ -306,14 +294,7 @@ if (!class_exists('MSPC_Frontend_Product')) {
 						</div>
 					</div>
 
-<<<<<<< HEAD
 					<!-- <a href="#" class="mspc-clear-selection"><?php _e('Clear selection', 'radykal'); ?></a> -->
-=======
-					<!-- <a href="#" class="mspc-clear-selection"><?php _e('Clear selection', 'radykal'); ?></a>
- -->
-					<!-- MRR-END -->
-
->>>>>>> ef13218db1ddcc5728ff8ae631b504c0442fafe0
 
 				</div><!-- Wrapper --->
 
