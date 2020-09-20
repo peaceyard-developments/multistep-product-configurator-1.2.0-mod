@@ -72,18 +72,10 @@ if (!class_exists('MSPC_Frontend_Product')) {
 				else if ($module_pos == 'before_product_con') {
 					add_action('woocommerce_before_single_product', array(&$this, 'add_mspc_form'), 20);
 				}
-
 				//before fancy product designer
 				else if ($module_pos == 'before_fancy_product_designer') {
-					// MRR - Add MSPC when a fpd product loaded from raq, cart or non of them
-					if (isset($_GET['raq_item_key'])) {
-						add_action('fpd_before_product_designer_raq', array(&$this, 'add_mspc_form'), 20);
-					} else {
-						add_action('fpd_before_product_designer', array(&$this, 'add_mspc_form'), 20);
-					}
-					// MRR -END
+					add_action('fpd_before_product_designer', array(&$this, 'add_mspc_form'), 20);
 				}
-
 				//after fancy product designer
 				else if ($module_pos == 'after_fancy_product_designer') {
 					add_action('fpd_after_product_designer', array(&$this, 'add_mspc_form'), 20);
@@ -271,7 +263,38 @@ if (!class_exists('MSPC_Frontend_Product')) {
 						</div><!-- Content -->
 
 					<?php endif; ?>
-					<a href="#" class="mspc-clear-selection"><?php _e('Clear selection', 'radykal'); ?></a>
+					<!-- Add Peaceyard Note after MSPC -->
+					<div class="py-wrapper">
+						<div class="py-note" style="flex-basis: 68%;">
+							<div class="py-msg" style="flex-basis: 70%;">
+								<h3>
+									<?php _e('Design your memorial below or get help from us with your design', 'peaceyard-product'); ?>
+								</h3>
+								<p>
+									<?php _e('Our goal is to provide you everything you need to create the most
+									unique and personalized memorial. You can customize our memorial on
+									your own or get help from one of our professionals.', 'peaceyard-product'); ?>
+								</p>
+							</div>
+							<div class="py-cta" style="flex-basis: 30%;">
+								<?php
+								$model_slug =  basename(strtok($_SERVER["REQUEST_URI"], '?'));
+
+								$link_params = "?your-subject=" . __('Headstone+Design+Request+model+', 'page-models') . $model_slug . "&headstone-type=" . $model_slug;
+
+								$quote_string = __('/help/headstone-design-request', 'language-links');
+
+								$model_help = get_site_url() . $quote_string . $link_params;
+								?>
+								<a class=" py-note-btn" href="<?php echo $model_help; ?>" target="_self"><?php _e('Please help me', 'peaceyard-product'); ?></a>
+							</div>
+						</div>
+						<div class="py-mspc-clear" style="flex-basis: 32%;">
+							<a href="#" class="mspc-clear-selection"><?php _e('Clear selection', 'radykal'); ?></a>
+						</div>
+					</div>
+
+					<!-- <a href="#" class="mspc-clear-selection"><?php _e('Clear selection', 'radykal'); ?></a> -->
 
 				</div><!-- Wrapper --->
 
@@ -515,7 +538,7 @@ if (!class_exists('MSPC_Frontend_Product')) {
 			}
 
 			return $attachment[0];
-
+			//MRR-END
 
 			/* // Split the $url into two parts with the wp-content directory as the separator
 			$parsed_url  = explode( parse_url( WP_CONTENT_URL, PHP_URL_PATH ), $url );
@@ -532,8 +555,6 @@ if (!class_exists('MSPC_Frontend_Product')) {
 			$attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM {$wpdb->prefix}posts WHERE guid RLIKE %s;", $parsed_url[1] ) );
 			// Returns null if no attachment is found
 			return $attachment[0]; */
-
-			//MRR-END
 		}
 	}
 }
